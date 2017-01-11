@@ -1,0 +1,232 @@
+<!--pages/classify/classify.wxml-->
+<view class="" style="display:flex;flex-diretion:row;background:#fff">
+  <scroll-view class="scrollbar" scroll-y="true" style="width:20%"  scroll-top="0" bindtap="bindtabbar">
+      <view class="tabbar {{currenttabindex=='0'?'active':''}}" data-id="0" style="width:100%;border-top: none;">果蔬</view>
+      <view class="tabbar {{currenttabindex=='1'?'active':''}}" data-id="1" style="width:100%">生鲜</view>
+      <view class="tabbar {{currenttabindex=='2'?'active':''}}" data-id="2" style="width:100%">干货</view>
+      <view class="tabbar {{currenttabindex=='3'?'active':''}}" data-id="3" style="width:100%">粮油</view>
+      <view class="tabbar {{currenttabindex=='4'?'active':''}}" data-id="4" style="width:100%">特产</view>
+      <view class="tabbar {{currenttabindex=='5'?'active':''}}" data-id="5" style="width:100%">名茶</view>
+      <view class="tabbar {{currenttabindex=='6'?'active':''}}" data-id="6" style="width:100%">名酒</view>
+      <view class="tabbar {{currenttabindex=='7'?'active':''}}" data-id="7" style="width:100%">零食</view>
+      <view class="tabbar {{currenttabindex=='8'?'active':''}}" data-id="8" style="width:100%">饮料</view>
+      <view class="tabbar {{currenttabindex=='9'?'active':''}}" data-id="9" style="width:100%;border-bottom: none;">其他</view>
+  </scroll-view>
+    <view class="menu {{currentmenuindex=='0'?'active':''}}" >
+        <view class="friuts">
+            <view class="goods">
+              <view class="gooditem" wx:for="{{productData.friuts}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="grain">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.grains}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="menu {{currentmenuindex=='1'?'active':''}}" >
+         <view class="friuts">
+            <view class="goods">
+              <view class="gooditem" wx:for="{{productData.friuts}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="teawine">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.teawines}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="menu {{currentmenuindex=='2'?'active':''}}">
+         <view class="grain">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.grains}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="imported">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.importeds}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="menu {{currentmenuindex=='3'?'active':''}}" >
+         <view class="teawine">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.teawines}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="grain">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.grains}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="imported">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.importeds}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="menu {{currentmenuindex=='4'?'active':''}}" >
+         <view class="local">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.locals}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="grain">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.grains}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="menu {{currentmenuindex=='5'?'active':''}}" >
+        <view class="teawine">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.teawines}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="friuts">
+            <view class="goods">
+              <view class="gooditem" wx:for="{{productData.friuts}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="menu {{currentmenuindex=='6'?'active':''}}" >
+         <view class="teawine">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.teawines}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="friuts">
+            <view class="goods">
+              <view class="gooditem" wx:for="{{productData.friuts}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="menu {{currentmenuindex=='7'?'active':''}}" >
+         <view class="grain">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.grains}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="imported">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.importeds}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="menu {{currentmenuindex=='8'?'active':''}}" >
+         <view class="teawine">
+            <view class="goods">
+                <view class="gooditem" wx:for="{{productData.teawines}}" data-goodid="{{item.id-1}}" bindtap="godetail" wx:key="{{item.id}}">
+                    <view class="goodview">
+                        <image class="goodimg" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="goodprice">{{item.price}}</view>
+                    <view class="goodtext">{{item.name}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="menu {{currentmenuindex=='9'?'active':''}}" >9</view>
+</view>

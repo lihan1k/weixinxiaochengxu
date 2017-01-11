@@ -1,0 +1,28 @@
+<view class="cart-list" >
+    <view class="content" wx:for="{{goods}}" id="{{index}}" data-id="{{item.id}}" style="display:flex;flex-direction:row">
+        <view style="width:10%" catchtap="selectState" id="{{index}}"><icon type="success" color="#FF6537" style="margin-top:33px;"></icon></view>
+        <view style="width:35%"><image src="{{item.imgUrl}}" style="width:90px;height:88px;border:1px solid #ccc"></image></view>
+        <view style="display:flex;flex-direction:column;width:55%">
+           <view class="goods-text" style="">
+               <text class="goods-name">{{item.name}}</text>
+               <text class="goods-price">{{item.price}}</text>
+           </view>
+           <view class="goods-info">{{item.pz}}</view>
+           <view style="display:flex;flex-direction:row;justify-content: space-between;">
+                <view class="" style="display:flex;flex-direction:row;border:1px solid #ccc;margin-top:16px;">
+                    <view class="des" bindtap="binddes" data-cartid="{{item.id}}">-</view>
+                    <view class="numInput"><input type="text" disabled value="{{item.inputValue}}" style="width:40px;height:30px"/></view>
+                    <view class="add" bindtap="bindadd" data-cartid="{{item.id}}">+</view>
+                </view>
+                <view class="remove" bindtap="bindremove" data-cartid="{{item.id}}"  style="text-align:right"><image src="{{item.delImg}}" style="width:32px;height:32px;"></image></view>
+           </view> 
+        </view>
+    </view>
+</view>
+<view class="sumcalc" style="position:fixed;bottom:0;left:0;z-index:99;width:100%;height:39px;line-height:40px;background:#fff;display:flex;flex-direction:row;justify-content:space-between;border-top:1px solid #eee">
+    <view class="" style="height:40px;line-height:40px;padding:0 0 0 12px;">
+        应付金额: <text class="sumprice" style="color:#FF6537">￥{{sumprice}}</text>
+    </view>
+    <view class="" style="padding:0 50px;color:#fff;background:#FF6537;height:40px;line-height:40px;font-size:16px">结 算</view>
+</view>
+<loading hidden="{{hiddening}}">加载中..</loading>

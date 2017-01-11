@@ -1,0 +1,27 @@
+  <swiper indicator-dots="true" autoplay="true" duration="1000" circular="true">
+      <swiper-item style="" wx:for="{{detail}}">
+         <image bindload="cusImageLoad" src="{{detail.detailpic}}" class="slide-image"></image>
+      </swiper-item>
+  </swiper>
+  <view class="p-content">
+        <text class="p-price">{{detail.price}}</text>
+        <text class="p-date">{{detail.yh}}</text>
+        <view class="near">
+             <image class="localpng" src="../../image/icon-location.png"></image>
+            <text class="">附近商场</text>
+        </view>
+  </view> 
+  <view class="service-info">
+        <view class="servicetext" wx:for="{{servicetext}}">
+            <image class="serviceimg" src="{{serviceicon}}"></image>
+            <text class="">{{item}}</text>
+        </view>
+        <!--<view style="margin-right: 12px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;line-height:40px;">
+            <image src="../../image/ok.png" style="width:18px;height:18px;margin-right: 5px;position: relative;top: 4px;left: 0"></image>
+            <text class="">先行赔付</text>
+        </view>
+        <view style="margin-right: 12px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;line-height:40px;">
+            <image src="../../image/ok.png" style="width:18px;height:18px;margin-right: 5px;position: relative;top: 4px;left: 0"></image>
+            <text class="">超时赔偿</text>
+        </view>-->
+   </view>

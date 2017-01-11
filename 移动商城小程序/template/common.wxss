@@ -1,0 +1,38 @@
+.goods{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.gooditem{
+  width:33.3333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.goodview{
+  width:3.2rem;
+  height:3.2rem;
+}
+.goodimg{
+  width:100%;
+  height:100%;
+}
+.goodprice{
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  margin-top: 5px;
+  color:red;
+}
+.goodtext{
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size:12px;
+  padding: 5px 0;
+}

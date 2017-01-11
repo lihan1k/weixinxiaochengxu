@@ -1,0 +1,33 @@
+/* pages/classify/classify.wxss */
+@import "../../template/common.wxss";
+page{
+    background: #fff;
+}
+.tabbar{
+    box-sizing: border-box;
+    padding: 10px;
+    border-top:1px solid transparent;
+    border-bottom:1px solid transparent;
+    text-align: center;
+}
+.tabbar.active{
+    box-sizing: border-box;
+    border-top:1px solid #FF6537;
+    border-bottom:1px solid #FF6537;
+    color:#FF6537;
+}
+.menu{
+    box-sizing: border-box;
+    width:80%;
+    padding: 10px;
+    display:none;
+}
+.menu.active{
+    width:80%;
+    display:block;
+}
+.scrollbar{
+    box-sizing: border-box;
+    border:1px solid #FF6537;
+    background: #fff;
+}
