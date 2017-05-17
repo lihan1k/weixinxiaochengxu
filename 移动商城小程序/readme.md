@@ -129,10 +129,11 @@
                                           			MMMMMMMMMMMMMMMMMM
                                                                  MMMMMMMMMMMMMMM
                                                                   HMMMMMM
-                         уы╩╫нР©у     сюнчBUG 
+                         О╬∙О╬≥О╫╩О╫╫О╬▌Н┤╤О╬∙     О╬⌠О╬─О╬▌О╬·BUG 
          
 */
 /*  
     Date   by  2017.1.11
-    Author by  lihan
+    
 */
+Е╬╝Д©║Е╟▐Г╗▀Е╨▐
